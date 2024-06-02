@@ -6,7 +6,7 @@ void main() => Development();
 
 class Development extends Env {
   @override
-  final String appName = 'SkyTronik Dev';
+  final String appName = 'Lugu Super Apps Dev';
 
   @override
   final String appUsername = 'skytronik';

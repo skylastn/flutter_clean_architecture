@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:lugu_pet/core/dependency_injection.dart';
 import 'package:lugu_pet/firebase_options.dart';
 import 'package:refreshed/refreshed.dart';
-import '../utility/shared/notif.dart';
+import '../utility/shared/notif/notif.dart';
 
 // import 'notification_services.dart';
 

@@ -2,8 +2,8 @@
 
 import 'package:refreshed/refreshed.dart';
 
-import '../features/core/bindings/home_binding.dart';
-import '../features/core/views/home_view.dart';
+import '../features/core/home/home_binding.dart';
+import '../features/core/home/home_view.dart';
 
 part 'app_routes.dart';
 

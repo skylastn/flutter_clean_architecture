@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:refreshed/refreshed.dart';
-import '../app/global/local_controller.dart';
-import '../utility/shared/notif.dart';
+import '../app/global/controller/local_controller.dart';
+import '../utility/shared/notif/notif.dart';
 import 'app_component.dart';
 import 'app_pages.dart';
 import 'app_store_application.dart';
@@ -78,10 +76,7 @@ class Env {
   initAllPackage() async {
     WidgetsFlutterBinding.ensureInitialized();
     Get.put(LocalController(), permanent: true);
-    await Notif().initNotif();
-    await FirebaseTraits().init();
 
-    await DenpendencyInjection.init();
     if (!GetPlatform.isWeb) {
       /// Set status bar icon color
       SystemChrome.setSystemUIOverlayStyle(
@@ -96,7 +91,12 @@ class Env {
     var application = AppStoreApplication();
     await application.onCreate();
     var initialRoute = AppPages.INITIAL;
-    await initializeDateFormatting('id_ID', null);
+
+    await Notif().initNotif();
+    await FirebaseTraits().init();
+
+    await DenpendencyInjection.init();
+    // await initializeDateFormatting('id_ID', null);
     // await CapabilityProfile.ensureProfileLoaded(); //printer
 
     runApp(AppComponent(application, initialRoute));

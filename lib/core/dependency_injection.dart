@@ -1,5 +1,5 @@
 import 'package:refreshed/refreshed.dart';
-import '../app/global/global_controller.dart';
+import '../app/global/controller/global_controller.dart';
 // import '../app/global/local_controller.dart';
 
 class DenpendencyInjection {

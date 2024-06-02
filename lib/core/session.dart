@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:lugu_pet/app/global/local_controller.dart';
+import 'package:lugu_pet/app/global/controller/local_controller.dart';
 import 'package:refreshed/refreshed.dart';
-
+import 'package:universal_html/html.dart' as html;
 import 'env.dart';
 
 class Session {
@@ -51,29 +51,34 @@ class Session {
   }
 
   Future<String> initFcmToken() async {
-    if (!kIsWeb &&
-        (Platform.isWindows || Platform.isFuchsia || Platform.isLinux)) {
+    try {
+      if (!kIsWeb &&
+          (Platform.isWindows || Platform.isFuchsia || Platform.isLinux)) {
+        return '';
+      }
+      NotificationSettings settings =
+          await FirebaseMessaging.instance.requestPermission();
+      Get.log(settings.authorizationStatus.name);
+
+      String temp = storage.getString('fcmToken') ?? '';
+      if (temp.isEmpty) {
+        Get.log(Env.value.vapidKey);
+        temp = await FirebaseMessaging.instance.getToken(
+              vapidKey: (kIsWeb) ? Env.value.vapidKey : null,
+            ) ??
+            '';
+        saveFcmToken(temp);
+      }
+      Get.log('Token Fcm : $temp');
+      return temp;
+    } catch (e) {
+      Get.log('error init Fcm Token : $e');
+      if (kIsWeb && kDebugMode) {
+        await Future.delayed(const Duration(seconds: 1));
+        html.window.location.reload();
+      }
       return '';
     }
-    NotificationSettings settings =
-        await FirebaseMessaging.instance.requestPermission();
-    if (kDebugMode) {
-      print(settings.authorizationStatus.name);
-    }
-
-    String temp = storage.getString('fcmToken') ?? '';
-    if (temp.isEmpty) {
-      Get.log(Env.value.vapidKey);
-      temp = await FirebaseMessaging.instance.getToken(
-            vapidKey: (kIsWeb) ? Env.value.vapidKey : null,
-          ) ??
-          '';
-      saveFcmToken(temp);
-    }
-    if (kDebugMode) {
-      print('Token Fcm : $temp');
-    }
-    return temp;
   }
 
   Future<void> saveidNotif(int value) async {

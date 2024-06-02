@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:lugu_pet/app/global/local_controller.dart';
+import 'package:lugu_pet/app/global/controller/local_controller.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:refreshed/refreshed.dart';
-import '../../core/session.dart';
-import '../../utility/shared/notif.dart';
-import '../../utility/shared/toast.dart';
+import '../../../core/session.dart';
+import '../../../utility/shared/notif/notif.dart';
+import '../../../utility/shared/toast/toast.dart';
 
 class GlobalController extends GetxController {
   RxBool isUserLogin = false.obs;
