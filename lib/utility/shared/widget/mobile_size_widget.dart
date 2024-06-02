@@ -40,15 +40,11 @@ class MobileSizeWidget extends StatelessWidget {
             margin: context.isPhone
                 ? null
                 : const EdgeInsets.fromLTRB(16, 0, 16, 0),
-            child: Card(
+            child: Container(
               color: Colors.white,
-              elevation: 1,
-              child: Container(
-                color: Colors.white,
-                width: DeviceSize.getMobileSize(),
-                padding: padding ?? const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                child: body,
-              ),
+              width: DeviceSize.getMobileSize(),
+              padding: padding ?? const EdgeInsets.fromLTRB(8, 8, 8, 8),
+              child: body,
             ),
           ),
         ),
