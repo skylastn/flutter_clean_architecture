@@ -6,10 +6,10 @@ void main() => Development();
 
 class Development extends Env {
   @override
-  final String appName = 'Lugu Super Apps Dev';
+  final String appName = 'SkyKomik Dev';
 
   @override
-  final String appUsername = 'skytronik';
+  final String appUsername = '';
 
   @override
   final String baseUrl = 'https://admin.lugu.id'; //dev

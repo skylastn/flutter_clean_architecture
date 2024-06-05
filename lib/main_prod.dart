@@ -5,7 +5,7 @@ void main() => Production();
 
 class Production extends Env {
   @override
-  final String appName = 'Lugu Super Apps';
+  final String appName = 'SkyKomik';
 
   @override
   final String appUsername = 'skytronik';

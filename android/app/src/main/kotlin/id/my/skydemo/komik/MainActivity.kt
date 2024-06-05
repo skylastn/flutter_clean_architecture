@@ -1,4 +1,4 @@
-package id.lugu.app.lugu_pet
+package id.my.skydemo.komik
 
 import io.flutter.embedding.android.FlutterActivity
 
