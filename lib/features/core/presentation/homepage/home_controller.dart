@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:refreshed/refreshed.dart';
 
-import '../../../app/global/model/content_model.dart';
+import '../../../../app/global/model/content_model.dart';
 
 class HomeController extends GetxController {
   List<String> imageList = [
@@ -12,84 +12,86 @@ class HomeController extends GetxController {
     'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
   ];
   bool isShowProduct = false;
-  List<ContentModel> listService = [
+  ContentModel? selectedCategory;
+  List<ContentModel> listCategory = [
     ContentModel(
       index: 0,
       content: 'assets/icons/ic_grooming.png',
       type: ServiceType.grooming,
-      name: 'Grooming',
+      name: 'Action',
     ),
     ContentModel(
-        index: 1,
-        content: 'assets/icons/ic_daycare.png',
-        type: ServiceType.daycare,
-        name: 'Daycare'),
+      index: 1,
+      content: 'assets/icons/ic_daycare.png',
+      type: ServiceType.daycare,
+      name: 'Comedy',
+    ),
     ContentModel(
-        index: 2,
-        content: 'assets/icons/ic_walking.png',
-        type: ServiceType.walking,
-        name: 'Walking'),
+      index: 2,
+      content: 'assets/icons/ic_walking.png',
+      type: ServiceType.walking,
+      name: 'Harem',
+    ),
+  ];
+
+  List<ContentModel> listContent = [
+    ContentModel(
+      index: 0,
+      content: 'https://komikcast.lol/wp-content/uploads/2023/02/nano.jpg?w=400&q=70',
+      type: null,
+      name: 'Nano Machine',
+    ),
+    ContentModel(
+      index: 1,
+      content: 'https://komikcast.lol/wp-content/uploads/2024/06/tpog62452432-e1717599878488.jpg?w=400&q=70',
+      type: null,
+      name: 'The Possessed Genius Gaming Stream',
+    ),
+    ContentModel(
+      index: 2,
+      content: 'https://komikcast.lol/wp-content/uploads/2023/11/genius.jpg?w=400&q=70',
+      type: null,
+      name: 'The Genius Assassin Who Takes',
+    ),
     ContentModel(
       index: 3,
-      content: 'assets/icons/ic_training.png',
-      type: ServiceType.training,
-      name: 'Training',
-    ),
-    ContentModel(
-        index: 4,
-        content: 'assets/icons/ic_petTaxi.png',
-        type: ServiceType.petTaxi,
-        name: 'Pet Taxi'),
-    ContentModel(
-      index: 5,
-      content: 'assets/icons/ic_sitting.png',
-      type: ServiceType.sitting,
-      name: 'Sitting',
-    ),
-    ContentModel(
-      index: 6,
-      content: 'assets/icons/ic_boarding.png',
-      type: ServiceType.boarding,
-      name: 'Boarding',
-    ),
-    ContentModel(
-      index: 7,
-      content: 'assets/icons/ic_moreBlue.png',
-      type: ServiceType.more,
-      name: 'More',
+      content: 'https://komikcast.lol/wp-content/uploads/2023/10/001-e1697473180192.jpg?w=400&q=70',
+      type: null,
+      name: 'Apotheosis',
     ),
   ];
 
   List<ContentModel> listTab = [
+    
     ContentModel(
       index: 0,
+      content: '',
+      name: 'Home',
+      type: TabType.home,
+    ),
+    ContentModel(
+      index: 1,
       content: '',
       name: 'Search',
       type: TabType.search,
     ),
     ContentModel(
-      index: 1,
-      content: '',
-      name: 'Request',
-      type: TabType.request,
-    ),
-    ContentModel(
       index: 2,
       content: '',
-      name: 'Timeline',
-      type: TabType.timeline,
+      name: 'Genre',
+      type: TabType.genre,
     ),
     ContentModel(
       index: 3,
       content: '',
-      name: 'Bag',
-      type: TabType.bag,
+      name: 'Libray',
+      type: TabType.library,
     ),
     ContentModel(
       index: 4,
       content: '',
-      name: 'Profile',
-      type: TabType.profile,
+      name: 'Me',
+      type: TabType.me,
     ),
   ];
 
@@ -104,16 +106,16 @@ class HomeController extends GetxController {
   }
 
   IconData getIcon(TabType tab) {
-    if (tab == TabType.request) {
-      return Icons.edit_document;
+    if (tab == TabType.home) {
+      return Icons.home;
     }
-    if (tab == TabType.timeline) {
-      return Icons.access_time_sharp;
+    if (tab == TabType.genre) {
+      return Icons.panorama_wide_angle_select_outlined;
     }
-    if (tab == TabType.bag) {
-      return Icons.shopping_bag_outlined;
+    if (tab == TabType.library) {
+      return Icons.my_library_books_sharp;
     }
-    if (tab == TabType.profile) {
+    if (tab == TabType.me) {
       return Icons.account_circle_sharp;
     }
     return Icons.search;
@@ -133,8 +135,8 @@ enum ServiceType {
 
 enum TabType {
   search,
-  request,
-  timeline,
-  bag,
-  profile,
+  home,
+  genre,
+  library,
+  me,
 }

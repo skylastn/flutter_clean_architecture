@@ -2,13 +2,13 @@ importScripts("https://www.gstatic.com/firebasejs/9.10.0/firebase-app-compat.js"
 importScripts("https://www.gstatic.com/firebasejs/9.10.0/firebase-messaging-compat.js");
 
 firebase.initializeApp({
-    apiKey: "AIzaSyB9er457ibXp-vTFeCalWvXn9cn7R0vgOs",
-    authDomain: "lugu-food-deliv.firebaseapp.com",
-    projectId: "lugu-food-deliv",
-    storageBucket: "lugu-food-deliv.appspot.com",
-    messagingSenderId: "901307950886",
-    appId: "1:901307950886:web:a9278b594e8b0241de83e7",
-    measurementId: "G-85G2EJ2MHK"
+    apiKey: "AIzaSyBUjNCMslgbcRiNdgSqBw0rYyF8h04kaVs",
+    authDomain: "skykomik.firebaseapp.com",
+    projectId: "skykomik",
+    storageBucket: "skykomik.appspot.com",
+    messagingSenderId: "925616653905",
+    appId: "1:925616653905:web:788949cead2f6141049a70",
+    measurementId: "G-TS62D0S5KT"
 });
 // Necessary to receive background messages:
 const messaging = firebase.messaging();

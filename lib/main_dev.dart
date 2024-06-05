@@ -22,7 +22,7 @@ class Development extends Env {
 
   @override
   final String vapidKey =
-      'BNPbvw_VuGEdfX_n1_yx5ZSQ_fYtghBhQPz36QrupiqCWACHtLcHq5Dm-j_OOgBWVSU2bBukq-EvFgB5tXTfX2o';
+      'BMgQNKaJ9qiy-bmreSvkMkVggn7vxKu-vMCw5Iyi1_Cp7W-jIT2JAsGm8mZ1GbhLqauy7P2VeWh53jPcbJFYMdw';
 
   @override
   final String websocket =

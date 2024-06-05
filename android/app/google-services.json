@@ -1,123 +1,26 @@
 {
   "project_info": {
-    "project_number": "901307950886",
-    "project_id": "lugu-food-deliv",
-    "storage_bucket": "lugu-food-deliv.appspot.com"
+    "project_number": "925616653905",
+    "project_id": "skykomik",
+    "storage_bucket": "skykomik.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:901307950886:android:c1a32f4ea698f782de83e7",
+        "mobilesdk_app_id": "1:925616653905:android:ea354eea10fc0812049a70",
         "android_client_info": {
-          "package_name": "customer.lugu.id"
+          "package_name": "id.my.skydemo.komik.dev"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB9AKUz0p6_hMXzzUzYx8306y4sEmUDMd0"
+          "current_key": "AIzaSyDpTTdr-VFEm2arR9cGE_IAKAyfwvLHDfA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "901307950886-b3mlspu8dpg741dos3ehc9370uqpg43g.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "id.lugu.id"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:901307950886:android:4d17bbff2f3ed528de83e7",
-        "android_client_info": {
-          "package_name": "id.lugu.app.dev"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB9AKUz0p6_hMXzzUzYx8306y4sEmUDMd0"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "901307950886-b3mlspu8dpg741dos3ehc9370uqpg43g.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "id.lugu.id"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:901307950886:android:ea68746924816cccde83e7",
-        "android_client_info": {
-          "package_name": "id.lugu.id"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "901307950886-1n5dgcramsks4volra1d5qve8mr57pv6.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "id.lugu.id",
-            "certificate_hash": "e131c72ff343bd4607aceb9630d1f6a7bac4da6a"
-          }
-        },
-        {
-          "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB9AKUz0p6_hMXzzUzYx8306y4sEmUDMd0"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "901307950886-kh2b8jikvjnvts5kcpjdfg78e90frt39.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "901307950886-b3mlspu8dpg741dos3ehc9370uqpg43g.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "id.lugu.id"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

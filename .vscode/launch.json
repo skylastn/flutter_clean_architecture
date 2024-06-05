@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Dev Lugu Super Apps",
+      "name": "Dev SkyKomik",
       "request": "launch",
       "type": "dart",
       "program": "${workspaceFolder}/lib/main_dev.dart",
@@ -16,7 +16,7 @@
       ],
     },
     {
-      "name": "Lugu Super Apps",
+      "name": "SkyKomik",
       "request": "launch",
       "type": "dart",
       "program": "${workspaceFolder}/lib/main_prod.dart",
@@ -27,7 +27,7 @@
       ],
     },
     {
-      "name": "Lugu Super Web",
+      "name": "Web SkyKomik",
       "type": "dart",
       "request": "launch",
       "program": "lib/main.dart",
@@ -35,6 +35,17 @@
       "args": [
         "-d",
         "chrome"
+      ]
+    },
+    {
+      "name": "Windows SkyKomik",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "-d",
+        "windows"
       ]
     },
   ]

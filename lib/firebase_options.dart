@@ -23,15 +23,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -47,30 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB9er457ibXp-vTFeCalWvXn9cn7R0vgOs',
-    appId: '1:901307950886:web:a9278b594e8b0241de83e7',
-    messagingSenderId: '901307950886',
-    projectId: 'lugu-food-deliv',
-    authDomain: 'lugu-food-deliv.firebaseapp.com',
-    storageBucket: 'lugu-food-deliv.appspot.com',
-    measurementId: 'G-85G2EJ2MHK',
+    apiKey: 'AIzaSyBUjNCMslgbcRiNdgSqBw0rYyF8h04kaVs',
+    appId: '1:925616653905:web:788949cead2f6141049a70',
+    messagingSenderId: '925616653905',
+    projectId: 'skykomik',
+    authDomain: 'skykomik.firebaseapp.com',
+    storageBucket: 'skykomik.appspot.com',
+    measurementId: 'G-TS62D0S5KT',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB9AKUz0p6_hMXzzUzYx8306y4sEmUDMd0',
-    appId: '1:901307950886:android:4d17bbff2f3ed528de83e7',
-    messagingSenderId: '901307950886',
-    projectId: 'lugu-food-deliv',
-    storageBucket: 'lugu-food-deliv.appspot.com',
+    apiKey: 'AIzaSyDpTTdr-VFEm2arR9cGE_IAKAyfwvLHDfA',
+    appId: '1:925616653905:android:ea354eea10fc0812049a70',
+    messagingSenderId: '925616653905',
+    projectId: 'skykomik',
+    storageBucket: 'skykomik.appspot.com',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyB9er457ibXp-vTFeCalWvXn9cn7R0vgOs',
-    appId: '1:901307950886:web:3505d2e0e8fb3821de83e7',
-    messagingSenderId: '901307950886',
-    projectId: 'lugu-food-deliv',
-    authDomain: 'lugu-food-deliv.firebaseapp.com',
-    storageBucket: 'lugu-food-deliv.appspot.com',
-    measurementId: 'G-Z3LRQRJ013',
+    apiKey: 'AIzaSyBUjNCMslgbcRiNdgSqBw0rYyF8h04kaVs',
+    appId: '1:925616653905:web:bc1fa058509bcc15049a70',
+    messagingSenderId: '925616653905',
+    projectId: 'skykomik',
+    authDomain: 'skykomik.firebaseapp.com',
+    storageBucket: 'skykomik.appspot.com',
+    measurementId: 'G-L7VS8VZ701',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBzBsdIU2uObPvGf3GerLROwcFsj8E4IN0',
+    appId: '1:925616653905:ios:33c5d06e07c4e294049a70',
+    messagingSenderId: '925616653905',
+    projectId: 'skykomik',
+    storageBucket: 'skykomik.appspot.com',
+    iosBundleId: 'pet.lugu.id.luguPet',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBzBsdIU2uObPvGf3GerLROwcFsj8E4IN0',
+    appId: '1:925616653905:ios:33c5d06e07c4e294049a70',
+    messagingSenderId: '925616653905',
+    projectId: 'skykomik',
+    storageBucket: 'skykomik.appspot.com',
+    iosBundleId: 'pet.lugu.id.luguPet',
+  );
+
 }
