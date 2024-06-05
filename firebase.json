@@ -4,7 +4,7 @@
             "android": {
                 "default": {
                     "projectId": "skykomik",
-                    "appId": "1:925616653905:android:ea354eea10fc0812049a70",
+                    "appId": "1:925616653905:android:300b7c2197f8fb51049a70",
                     "fileOutput": "android/app/google-services.json"
                 }
             },
@@ -12,7 +12,7 @@
                 "lib/firebase_options.dart": {
                     "projectId": "skykomik",
                     "configurations": {
-                        "android": "1:925616653905:android:ea354eea10fc0812049a70",
+                        "android": "1:925616653905:android:300b7c2197f8fb51049a70",
                         "ios": "1:925616653905:ios:33c5d06e07c4e294049a70",
                         "macos": "1:925616653905:ios:33c5d06e07c4e294049a70",
                         "web": "1:925616653905:web:788949cead2f6141049a70",

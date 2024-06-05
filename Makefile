@@ -36,8 +36,8 @@ release_firebase_android_dev:
 	fvm flutter clean
 	fvm flutter build apk --release --build-name=$(VERSION) --build-number=$(shell cat ./BUILDNUMBER) --flavor development -t lib/main_dev.dart --obfuscate --split-debug-info=./lugu_superapps_dev
 	firebase appdistribution:distribute build/app/outputs/flutter-apk/app-development-release.apk  \
-		--app 1:901307950886:android:4d17bbff2f3ed528de83e7 \
-		--groups "lugu-tester-group" \
+		--app 1:925616653905:android:ea354eea10fc0812049a70 \
+		--groups "tester-skykomik" \
 		--release-notes-file "release_notes.txt" \
 		--token "${FIREBASE_TOKEN}"
 
@@ -47,8 +47,8 @@ release_firebase_android_prod:
 	fvm flutter clean
 	fvm flutter build apk --release --build-name=$(VERSION) --build-number=$(shell cat ./BUILDNUMBER) --flavor production -t lib/main_prod.dart --obfuscate --split-debug-info=./lugu_superapps
 	firebase appdistribution:distribute build/app/outputs/flutter-apk/app-production-release.apk  \
-		--app 1:901307950886:android:ea68746924816cccde83e7  \
-		--groups "lugu-tester-group" \
+		--app 1:925616653905:android:300b7c2197f8fb51049a70  \
+		--groups "tester-skykomik" \
 		--release-notes "[PROD] ${CHANGE_LOG}" \
 		--token "${FIREBASE_TOKEN}"
 

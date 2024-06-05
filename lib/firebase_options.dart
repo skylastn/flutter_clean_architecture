@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDpTTdr-VFEm2arR9cGE_IAKAyfwvLHDfA',
-    appId: '1:925616653905:android:ea354eea10fc0812049a70',
+    appId: '1:925616653905:android:300b7c2197f8fb51049a70',
     messagingSenderId: '925616653905',
     projectId: 'skykomik',
     storageBucket: 'skykomik.appspot.com',

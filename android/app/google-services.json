@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:925616653905:android:300b7c2197f8fb51049a70",
+        "android_client_info": {
+          "package_name": "id.my.skydemo.komik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpTTdr-VFEm2arR9cGE_IAKAyfwvLHDfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:925616653905:android:ea354eea10fc0812049a70",
         "android_client_info": {
           "package_name": "id.my.skydemo.komik.dev"
