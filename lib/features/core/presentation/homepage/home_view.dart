@@ -61,7 +61,7 @@ class HomeView extends GetView<HomeController> {
                               RawMaterialButton(
                                 onPressed: () {},
                                 elevation: 2.0,
-                                fillColor: ColorConstant.orange,
+                                fillColor: Colors.lightBlueAccent,
                                 padding: const EdgeInsets.all(15.0),
                                 shape: const CircleBorder(),
                                 child: const Icon(
@@ -222,7 +222,7 @@ class HomeView extends GetView<HomeController> {
       shrinkWrap: true,
       crossAxisCount: 3,
       padding: const EdgeInsets.all(4.0),
-      childAspectRatio: 8.0 / 9.0,
+      childAspectRatio: 5.0 / 9.0,
       children: controller.listContent
           .map(
             (content) => GridTile(
@@ -231,12 +231,23 @@ class HomeView extends GetView<HomeController> {
                 child: Column(
                   children: [
                     Expanded(
-                      flex: 3,
-                      child: Image.network(content.content),
+                      flex: 5,
+                      child: Image.network(
+                        content.content,
+                        fit: BoxFit.fill,
+                      ),
                     ),
+                    const SizedBox(height: 8),
                     Expanded(
                       flex: 1,
-                      child: Text(content.name),
+                      child: Text(
+                        content.name,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ],
                 ),

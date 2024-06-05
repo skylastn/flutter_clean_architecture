@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:isolate';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -20,7 +21,9 @@ class FirebaseTraits {
 
     // Set the background messaging handler early on, as a named top-level function
     FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
-
+    if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
+      return;
+    }
     await FirebaseMessaging.instance
         .setForegroundNotificationPresentationOptions(
       alert: true,
