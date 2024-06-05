@@ -43,37 +43,37 @@ flavorizr:
   flavors: 
     development: 
       app: 
-        name: Lugu Super Apps Dev
+        name: SkyKomik Dev
       android: 
-        applicationId: id.lugu.app.dev
+        applicationId: id.my.skydemo.komik.dev
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_dev.dart
       linux: 
-        bundleId: id.lugu.app.dev
+        bundleId: id.my.skydemo.komik.dev
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_dev.dart
       windows: 
-        bundleId: id.lugu.app.dev
+        bundleId: id.my.skydemo.komik.dev
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_dev.dart
     production: 
       app: 
-        name: Lugu Super Apps
+        name: SkyKomik
       android: 
-        applicationId: id.lugu.app
+        applicationId: id.my.skydemo.komik
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_prod.dart
       linux: 
-        bundleId: id.lugu.app
+        bundleId: id.my.skydemo.komik
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_prod.dart
       windows: 
-        bundleId: id.lugu.app
+        bundleId: id.my.skydemo.komik
         variables: 
           FLUTTER_TARGET: 
             value: lib/main_prod.dart
