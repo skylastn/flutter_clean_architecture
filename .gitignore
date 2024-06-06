@@ -56,3 +56,4 @@ windows/flutter/generated_plugins.cmake
 android/app/google-services.json
 firebase.json
 Makefile
+lib/firebase_options.dart
