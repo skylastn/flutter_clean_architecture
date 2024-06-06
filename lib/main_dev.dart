@@ -12,6 +12,9 @@ class Development extends Env {
   final String appUsername = '';
 
   @override
+  final String beUrl = 'https://be.wibu.skydemo.my.id';
+
+  @override
   final String baseUrl = 'https://admin.lugu.id'; //dev
 
   @override

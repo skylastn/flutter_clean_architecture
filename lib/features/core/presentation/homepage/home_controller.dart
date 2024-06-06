@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lugu_pet/features/core/application/komik_service.dart';
 import 'package:refreshed/refreshed.dart';
 import 'home_state.dart';
 
@@ -8,6 +9,20 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+  }
+
+  @override
+  void onReady() {
+    getPopularKomik();
+    super.onReady();
+  }
+
+  Future<void> getPopularKomik() async {
+    var response = await KomikService().getPopularKomik();
+    response.fold((l) => Get.log(l.message), (r) {
+      state.listPopularKomik.assignAll(r.datas ?? []);
+      update();
+    });
   }
 
   void showProduct() {

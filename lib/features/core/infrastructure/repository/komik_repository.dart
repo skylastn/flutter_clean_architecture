@@ -1,5 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:lugu_pet/app/common/exception.dart';
+import 'package:lugu_pet/features/core/infrastructure/data_source/komik_remote_data_source.dart';
+import 'package:lugu_pet/features/core/infrastructure/model/komik_response.dart';
 import 'package:lugu_pet/features/core/infrastructure/model/recent_chapter_komik_model.dart';
 
 import '../../domain/interface/komik_repository_base.dart';
@@ -20,5 +22,8 @@ class KomikRepository implements KomikRepositoryBase {
     );
   }
 
-  
+  @override
+  Future<Either<GenericException, KomikResponse>> getPopularKomik() async {
+    return await KomikRemoteDataSource().getPopularKomik();
+  }
 }

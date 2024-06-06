@@ -9,10 +9,8 @@ import 'http_config.dart';
 import 'model/network_status_model.dart';
 import 'model/response_model.dart';
 
-String url = Env.value.baseUrl + urlApi;
-String urlApi = '/api/';
-
 class ApiProvider {
+  String url = Env.value.beUrl;
   var client = http.Client();
   int timeOut = 120;
 

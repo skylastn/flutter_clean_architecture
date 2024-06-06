@@ -23,6 +23,8 @@ class Env {
 
   String get appUsername => '';
 
+  String get beUrl => '';
+
   String get baseUrl => '';
 
   String get imageUrl => '';

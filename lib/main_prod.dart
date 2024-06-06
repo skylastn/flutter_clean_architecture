@@ -9,6 +9,9 @@ class Production extends Env {
 
   @override
   final String appUsername = 'skytronik';
+  
+  @override
+  final String beUrl = 'https://be.wibu.skydemo.my.id';
 
   @override
   final String baseUrl = 'http://admin.lugu.id'; //dev

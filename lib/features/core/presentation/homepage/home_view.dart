@@ -226,7 +226,7 @@ class HomeView extends GetView<HomeController> {
       crossAxisCount: 3,
       padding: const EdgeInsets.all(4.0),
       childAspectRatio: (Get.context?.isPhone == true ? 4.0 : 5.0) / 9.0,
-      children: state.listContent
+      children: state.listPopularKomik
           .map(
             (content) => GridTile(
               child: Card(
@@ -236,7 +236,7 @@ class HomeView extends GetView<HomeController> {
                     Expanded(
                       flex: 5,
                       child: Image.network(
-                        content.content,
+                        content.thumbnail ?? '',
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -244,7 +244,7 @@ class HomeView extends GetView<HomeController> {
                     Expanded(
                       flex: 1,
                       child: Text(
-                        content.name,
+                        content.title ?? '',
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontWeight: FontWeight.w600,

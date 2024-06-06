@@ -1,6 +1,10 @@
 import '../../../../app/global/model/content_model.dart';
+import '../../infrastructure/model/komik_response.dart';
 
 class HomeState {
+  
+  List<DataKomik> listPopularKomik = [];
+
   List<String> imageList = [
     'https://static.vecteezy.com/system/resources/previews/007/301/684/original/pet-shop-banner-design-template-cartoon-illustration-of-cats-dogs-house-food-vector.jpg',
     'https://i1.wp.com/pet-care.co.za/wp-content/uploads/2018/07/Pet-Care-Banner.jpg?ssl=1'
