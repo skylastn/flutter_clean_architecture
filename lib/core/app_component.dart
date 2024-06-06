@@ -4,6 +4,7 @@ import 'package:refreshed/refreshed.dart';
 import 'app_pages.dart';
 import 'app_provider.dart';
 import 'app_store_application.dart';
+import 'binding.dart';
 import 'env.dart';
 
 class AppComponent extends StatelessWidget {
@@ -21,6 +22,7 @@ class AppComponent extends StatelessWidget {
       enableLog: kDebugMode,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      binds: AppBinding.listInitialBinding,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
@@ -34,7 +36,6 @@ class AppComponent extends StatelessWidget {
         );
       },
     );
-
     final appProvider = AppProvider(application: _application, child: myApp);
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),

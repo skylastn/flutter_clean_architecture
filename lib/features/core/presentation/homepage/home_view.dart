@@ -1,14 +1,15 @@
 import 'package:carousel_slider_x/carousel_slider_x.dart';
 import 'package:flutter/material.dart';
 import 'package:lugu_pet/app/global/model/content_model.dart';
-import 'package:lugu_pet/utility/shared/size/device_size.dart';
 import 'package:lugu_pet/utility/shared/widget/mobile_size_widget.dart';
 import 'package:refreshed/refreshed.dart';
 import '../../../../app/theme/style.dart';
 import 'home_controller.dart';
+import 'home_state.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+  HomeView({super.key});
+  final state = Get.find<HomeController>().state;
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
@@ -81,7 +82,7 @@ class HomeView extends GetView<HomeController> {
                             enlargeCenterPage: false,
                             autoPlay: true,
                           ),
-                          items: controller.imageList
+                          items: state.imageList
                               .map(
                                 (item) => SizedBox(
                                   width: Get.width,
@@ -99,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                         const SizedBox(height: 5),
                         contentWidget(),
                         const SizedBox(height: 5),
-                        if (!controller.isShowProduct)
+                        if (!state.isShowProduct)
                           InkWell(
                             onTap: () => controller.showProduct(),
                             child: Image.network(
@@ -109,7 +110,7 @@ class HomeView extends GetView<HomeController> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                        if (controller.isShowProduct) showProductWidget(),
+                        if (state.isShowProduct) showProductWidget(),
                       ],
                     ),
                   ),
@@ -122,7 +123,7 @@ class HomeView extends GetView<HomeController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      for (var content in controller.listTab)
+                      for (var content in state.listTab)
                         tabContentWidget(content, content.type)
                     ],
                   ),
@@ -185,20 +186,20 @@ class HomeView extends GetView<HomeController> {
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
-        itemCount: controller.listCategory.length,
+        itemCount: state.listCategory.length,
         padding: const EdgeInsets.only(
           left: 8,
           right: 8,
         ),
         itemBuilder: (BuildContext context, int index) {
-          ContentModel content = controller.listCategory[index];
+          ContentModel content = state.listCategory[index];
           return InkWell(
             onTap: () {
-              controller.selectedCategory = content;
+              state.selectedCategory = content;
               controller.update();
             },
             child: Card(
-              color: controller.selectedCategory?.type != content.type
+              color: state.selectedCategory?.type != content.type
                   ? Colors.lightBlue
                   : Colors.lightBlueAccent,
               margin: const EdgeInsets.only(right: 16),
@@ -225,7 +226,7 @@ class HomeView extends GetView<HomeController> {
       crossAxisCount: 3,
       padding: const EdgeInsets.all(4.0),
       childAspectRatio: (Get.context?.isPhone == true ? 4.0 : 5.0) / 9.0,
-      children: controller.listContent
+      children: state.listContent
           .map(
             (content) => GridTile(
               child: Card(
