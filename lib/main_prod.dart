@@ -8,16 +8,16 @@ class Production extends Env {
   final String appName = 'SkyKomik';
 
   @override
-  final String appUsername = 'skytronik';
+  final String appUsername = '';
   
   @override
-  final String beUrl = 'https://be.wibu.skydemo.my.id';
+  final String beUrl = 'https://be.demo.id';
 
   @override
-  final String baseUrl = 'http://admin.lugu.id'; //dev
+  final String baseUrl = 'http://demo.id'; //dev
 
   @override
-  final String imageUrl = 'http://admin.lugu.id/file/';
+  final String imageUrl = 'http://demo.id/file/';
 
   @override
   final String logo = 'assets/images/logo.png';
@@ -28,7 +28,7 @@ class Production extends Env {
 
   @override
   final String websocket =
-      'wss://ai-care.callink.id/websocket'; // socket.io reject connecting so websocket handle it
+      'wss://demo.id/websocket'; // socket.io reject connecting so websocket handle it
   @override
   final Color primarySwatch = Colors.teal;
 
@@ -36,5 +36,5 @@ class Production extends Env {
   EnvType environmentType = EnvType.production;
 
   @override
-  final String dbName = 'LuguSuperApps';
+  final String dbName = 'DemoSuperApps';
 }

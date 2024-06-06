@@ -12,13 +12,13 @@ class Development extends Env {
   final String appUsername = '';
 
   @override
-  final String beUrl = 'https://be.wibu.skydemo.my.id';
+  final String beUrl = 'https://be.demo.my.id';
 
   @override
-  final String baseUrl = 'https://admin.lugu.id'; //dev
+  final String baseUrl = 'https://demo.id'; //dev
 
   @override
-  final String imageUrl = 'https://admin.lugu.id/file/';
+  final String imageUrl = 'https://demo.id/file/';
 
   @override
   final String logo = 'assets/images/logo.png';
@@ -29,12 +29,12 @@ class Development extends Env {
 
   @override
   final String websocket =
-      'wss://ai-care.callink.id/websocket'; // socket.io reject connecting so websocket handle it
+      'wss://demo.id/websocket'; // socket.io reject connecting so websocket handle it
   @override
   final Color primarySwatch = Colors.teal;
   @override
   EnvType environmentType = EnvType.development;
 
   @override
-  final String dbName = 'LuguSuperAppsDev';
+  final String dbName = 'DemoAppsDev';
 }
