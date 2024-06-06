@@ -1,6 +1,7 @@
 import 'package:carousel_slider_x/carousel_slider_x.dart';
 import 'package:flutter/material.dart';
 import 'package:lugu_pet/app/global/model/content_model.dart';
+import 'package:lugu_pet/utility/shared/size/device_size.dart';
 import 'package:lugu_pet/utility/shared/widget/mobile_size_widget.dart';
 import 'package:refreshed/refreshed.dart';
 import '../../../../app/theme/style.dart';
@@ -101,9 +102,9 @@ class HomeView extends GetView<HomeController> {
                         if (!controller.isShowProduct)
                           InkWell(
                             onTap: () => controller.showProduct(),
-                            child: Image.asset(
-                              'assets/images/im_productBanner.png',
-                              height: 150,
+                            child: Image.network(
+                              'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/175463501/original/aee4d1f49fe65b066d4288d2b616c796c866107a/design-a-unique-game-anime-manga-logo-and-banner.jpg',
+                              height: 200,
                               width: Get.width,
                               fit: BoxFit.fill,
                             ),
@@ -219,10 +220,11 @@ class HomeView extends GetView<HomeController> {
 
   Widget contentWidget() {
     return GridView.count(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       crossAxisCount: 3,
       padding: const EdgeInsets.all(4.0),
-      childAspectRatio: 5.0 / 9.0,
+      childAspectRatio: (Get.context?.isPhone == true ? 4.0 : 5.0) / 9.0,
       children: controller.listContent
           .map(
             (content) => GridTile(

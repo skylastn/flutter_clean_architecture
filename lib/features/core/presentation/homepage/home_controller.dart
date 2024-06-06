@@ -32,37 +32,46 @@ class HomeController extends GetxController {
       type: ServiceType.walking,
       name: 'Harem',
     ),
+    ContentModel(
+      index: 3,
+      content: 'assets/icons/ic_walking.png',
+      type: ServiceType.more,
+      name: 'More',
+    ),
   ];
 
   List<ContentModel> listContent = [
     ContentModel(
       index: 0,
-      content: 'https://komikcast.lol/wp-content/uploads/2023/02/nano.jpg?w=400&q=70',
+      content:
+          'https://komikcast.lol/wp-content/uploads/2023/02/nano.jpg?w=400&q=70',
       type: null,
       name: 'Nano Machine',
     ),
     ContentModel(
       index: 1,
-      content: 'https://komikcast.lol/wp-content/uploads/2024/06/tpog62452432-e1717599878488.jpg?w=400&q=70',
+      content:
+          'https://komikcast.lol/wp-content/uploads/2024/06/tpog62452432-e1717599878488.jpg?w=400&q=70',
       type: null,
       name: 'The Possessed Genius Gaming Stream',
     ),
     ContentModel(
       index: 2,
-      content: 'https://komikcast.lol/wp-content/uploads/2023/11/genius.jpg?w=400&q=70',
+      content:
+          'https://komikcast.lol/wp-content/uploads/2023/11/genius.jpg?w=400&q=70',
       type: null,
       name: 'The Genius Assassin Who Takes',
     ),
     ContentModel(
       index: 3,
-      content: 'https://komikcast.lol/wp-content/uploads/2023/10/001-e1697473180192.jpg?w=400&q=70',
+      content:
+          'https://komikcast.lol/wp-content/uploads/2023/10/001-e1697473180192.jpg?w=400&q=70',
       type: null,
       name: 'Apotheosis',
     ),
   ];
 
   List<ContentModel> listTab = [
-    
     ContentModel(
       index: 0,
       content: '',
@@ -101,8 +110,8 @@ class HomeController extends GetxController {
   }
 
   void showProduct() {
-    isShowProduct = true;
-    update();
+    // isShowProduct = true;
+    // update();
   }
 
   IconData getIcon(TabType tab) {

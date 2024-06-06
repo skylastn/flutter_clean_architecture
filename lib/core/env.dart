@@ -76,7 +76,7 @@ class Env {
   initAllPackage() async {
     WidgetsFlutterBinding.ensureInitialized();
     Get.put(LocalController(), permanent: true);
-
+    await Get.find<LocalController>().initLocalDatabase();
     if (!GetPlatform.isWeb) {
       /// Set status bar icon color
       SystemChrome.setSystemUIOverlayStyle(
